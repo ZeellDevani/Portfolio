@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zeel Devani | Creative Designer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#7B68EE", secondary: "#9370DB" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      html {
+      scroll-behavior: smooth;
+      }
+      body {
+      font-family: 'Inter', sans-serif;
+      background: #0B0B1F;
+      color: #fff;
+      }
+      h1, h2, h3, h4, h5, h6 {
+      font-family: 'Playfair Display', serif;
+      }
+      .gradient-bg {
+      background: linear-gradient(135deg, rgba(11,11,31,0.9) 0%, rgba(45,45,85,0.9) 100%);
+      }
+      .star-bg {
+      background: radial-gradient(circle at center, #1a1a3a 0%, #0B0B1F 100%);
+      position: relative;
+      overflow: hidden;
+      }
+      .star-bg::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      background-image:
+      radial-gradient(2px 2px at 40px 60px, #fff 100%, transparent),
+      radial-gradient(2px 2px at 20px 50px, #fff 100%, transparent),
+      radial-gradient(2px 2px at 30px 100px, #fff 100%, transparent),
+      radial-gradient(2px 2px at 40px 60px, #fff 100%, transparent),
+      radial-gradient(2px 2px at 110px 90px, #fff 100%, transparent),
+      radial-gradient(2px 2px at 190px 150px, #fff 100%, transparent);
+      background-repeat: repeat;
+      background-size: 200px 200px;
+      animation: stars 100s linear infinite;
+      opacity: 0.5;
+      }
+      @keyframes stars {
+      from {transform: rotate(0deg);}
+      to {transform: rotate(360deg);}
+      }
+      .hover-card {
+      transition: all 0.3s ease;
+      }
+      .hover-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      .custom-checkbox {
+      appearance: none;
+      -webkit-appearance: none;
+      height: 20px;
+      width: 20px;
+      /* background-color: #fff; */
+      border: 2px solid #e2e8f0;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      outline: none;
+      }
+      .custom-checkbox:checked {
+      background-color: #6366f1;
+      border-color: #6366f1;
+      }
+      .custom-checkbox:checked::after {
+      content: "✓";
+      /* color: white; */
+      font-size: 14px;
+      }
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
+      }
+      .nav-link {
+      position: relative;
+      }
+      .nav-link::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      bottom: -4px;
+      left: 0;
+      background-color: #6366f1;
+      transition: width 0.3s ease;
+      }
+      .nav-link:hover::after,
+      .nav-link.active::after {
+      width: 100%;
+      }
+      .filter-btn.active {
+      background-color: #6366f1;
+      /* color: white; */
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Header -->
+    <header
+      class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-lg z-50"
+    >
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <a href="#" class="text-2xl font-['Pacifico'] text-gray-800"
+          >Zeel Devani</a
+        >
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex items-center space-x-8">
+          <a
+            href="#home"
+            class="nav-link active text-gray-800 hover:text-primary transition-colors"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="nav-link text-gray-800 hover:text-primary transition-colors"
+            >About</a
+          >
+          <a
+            href="#projects"
+            class="nav-link text-gray-800 hover:text-primary transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="nav-link text-gray-800 hover:text-primary transition-colors"
+            >Contact</a
+          >
+        </nav>
+        <!-- Mobile Menu Button -->
+        <button
+          class="md:hidden w-10 h-10 flex items-center justify-center text-gray-800"
+          id="mobile-menu-button"
+        >
+          <i class="ri-menu-line ri-lg"></i>
+        </button>
+      </div>
+      <!-- Mobile Navigation -->
+      <div
+        class="md:hidden hidden bg-white w-full absolute top-full left-0 shadow-md"
+        id="mobile-menu"
+      >
+        <div class="container mx-auto px-6 py-4 flex flex-col space-y-4">
+          <a
+            href="#home"
+            class="text-gray-800 hover:text-primary py-2 transition-colors"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="text-gray-800 hover:text-primary py-2 transition-colors"
+            >About</a
+          >
+          <a
+            href="#projects"
+            class="text-gray-800 hover:text-primary py-2 transition-colors"
+            >Projects</a
+          >
+          <a
+            href="#contact"
+            class="text-gray-800 hover:text-primary py-2 transition-colors"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="w-full min-h-screen pt-24 relative overflow-hidden star-bg"
+      style="background-image: url('https://readdy.ai/api/search-image?query=A%20stunning%20cosmic%20scene%20with%20swirling%20galaxies%2C%20nebulas%2C%20and%20stars%2C%20featuring%20deep%20purples%2C%20blues%2C%20and%20subtle%20gold%20accents.%20The%20composition%20shows%20a%20creative%20workspace%20floating%20in%20space%20with%20holographic%20screens%20and%20futuristic%20design%20elements%2C%20creating%20an%20ethereal%20and%20magical%20atmosphere%20perfect%20for%20a%20cosmic-themed%20portfolio&width=1920&height=1080&seq=1&orientation=landscape'); background-size: cover; background-position: center right;"
+    >
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-white/40  to-transparent"
+      ></div>
+      <div
+        class="container mx-auto px-6 py-20 relative z-10 flex flex-col justify-center h-full"
+      >
+        <div class="max-w-2xl">
+          <h1
+            class="text-5xl md:text-6xl font-bold text-gray-900 leading-tight mb-6"
+          >
+            Creative Designer Crafting Visual Stories
+          </h1>
+          <p class="text-xl md:text-2xl text-gray-700 mb-10">
+            Transforming ideas into compelling visual experiences that captivate
+            and inspire.
+          </p>
+          <a
+            href="#projects"
+            class="inline-flex items-center px-8 py-3 bg-primary text-white font-medium rounded-button hover:bg-indigo-600 transition-colors shadow-md whitespace-nowrap"
+          >
+            View My Work
+            <i class="ri-arrow-right-line ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- About Section -->
+    <section id="about" class="py-20 star-bg">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center text-white-900 mb-16">
+          About Me
+        </h2>
+        <div class="flex flex-col md:flex-row gap-12 items-center">
+          <div class="md:w-2/5">
+            <div class="rounded-lg overflow-hidden shadow-xl">
+              <img
+                src="https://static.readdy.ai/image/3cee0f4ce3f7ecd56e56aac8116f6602/39bb60eebd6a41e4e51ad9d60d702055.jfif"
+                alt="Zeel Devani"
+                class=" w-full object-cover"
+              />
+            </div>
+          </div>
+          <div class="md:w-3/5">
+            <p class="text-lg text-white-700 mb-8">
+              Hello! I'm Zeel Devani, a passionate graphic designer with over creating meaningful visual solutions. Based in
+              Mumbai, I specialize in branding, UI/UX design, and illustration,
+              helping businesses communicate their vision through compelling
+              visuals.
+            </p>
+            <p class="text-lg text-white-700 mb-8">
+              My design philosophy centers on the perfect balance between
+              aesthetics and functionality. I believe that great design should
+              not only look beautiful but also solve problems effectively. Every
+              project I undertake is approached with meticulous attention to
+              detail and a commitment to exceeding client expectations.
+            </p>
+            <h3 class="text-2xl font-semibold text-white-900 mb-6">
+              Skills
+            </h3>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+              <div class="bg-white p-4 rounded shadow-sm">
+                <div
+                  class="w-10 h-10 flex items-center justify-center text-primary mb-2"
+                >
+                  <i class="ri-palette-line ri-xl"></i>
+                </div>
+                <h4 class="font-semibold text-gray-900">Brand Identity</h4>
+              </div>
+              <div class="bg-white p-4 rounded shadow-sm">
+                <div
+                  class="w-10 h-10 flex items-center justify-center text-primary mb-2"
+                >
+                  <i class="ri-layout-4-line ri-xl"></i>
+                </div>
+                <h4 class="font-semibold text-gray-900">UI/UX Design</h4>
+              </div>
+              <div class="bg-white p-4 rounded shadow-sm">
+                <div
+                  class="w-10 h-10 flex items-center justify-center text-primary mb-2"
+                >
+                  <i class="ri-pen-nib-line ri-xl"></i>
+                </div>
+                <h4 class="font-semibold text-gray-900">Illustration</h4>
+              </div>
+              <div class="bg-white p-4 rounded shadow-sm">
+                <div
+                  class="w-10 h-10 flex items-center justify-center text-primary mb-2"
+                >
+                  <i class="ri-artboard-2-line ri-xl"></i>
+                </div>
+                <h4 class="font-semibold text-gray-900">Print Design</h4>
+              </div>
+              <div class="bg-white p-4 rounded shadow-sm">
+                <div
+                  class="w-10 h-10 flex items-center justify-center text-primary mb-2"
+                >
+                  <i class="ri-movie-line ri-xl"></i>
+                </div>
+                <h4 class="font-semibold text-gray-900">Motion Graphics</h4>
+              </div>
+              <div class="bg-white p-4 rounded shadow-sm">
+                <div
+                  class="w-10 h-10 flex items-center justify-center text-primary mb-2"
+                >
+                  <i class="ri-image-line ri-xl"></i>
+                </div>
+                <h4 class="font-semibold text-gray-900">Photography</h4>
+              </div>
+            </div>
+            <a
+              href="#"
+              class="inline-flex items-center px-6 py-3 bg-blue-800 text-white font-medium rounded-button hover:bg-gray-700 transition-colors shadow-md whitespace-nowrap"
+            >
+              <i class="ri-download-line mr-2"></i>
+              Download CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 star-bg">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center text-white-900 mb-4">
+          My Projects
+        </h2>
+        <p class="text-lg text-center text-white-600 mb-12">
+          A selection of my recent work across various design disciplines
+        </p>
+        <!-- Filter Buttons -->
+        <div class="flex flex-wrap justify-center gap-2 mb-12">
+          <button
+            class="filter-btn active px-5 py-2 rounded-full border border-gray-300 text-sm font-medium transition-colors whitespace-nowrap !rounded-button"
+            data-filter="all"
+          >
+            All Projects
+          </button>
+          <button
+            class="filter-btn px-5 py-2 rounded-full border border-gray-300 text-sm font-medium transition-colors whitespace-nowrap !rounded-button"
+            data-filter="branding"
+          >
+            Branding
+          </button>
+          <button
+            class="filter-btn px-5 py-2 rounded-full border border-gray-300 text-sm font-medium transition-colors whitespace-nowrap !rounded-button"
+            data-filter="ui-ux"
+          >
+            UI/UX
+          </button>
+          <button
+            class="filter-btn px-5 py-2 rounded-full border border-gray-300 text-sm font-medium transition-colors whitespace-nowrap !rounded-button"
+            data-filter="illustration"
+          >
+            Illustration
+          </button>
+        </div>
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="project-card hover-card bg-white rounded-lg overflow-hidden shadow-md"
+            data-category="branding"
+          >
+            <div class="relative overflow-hidden h-64">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20branding%20project%20for%20a%20modern%20coffee%20shop%2C%20featuring%20logo%20design%2C%20color%20palette%2C%20typography%2C%20and%20brand%20identity%20elements%20on%20a%20clean%20background%2C%20high%20quality%20professional%20graphic%20design%20work&width=600&height=400&seq=3&orientation=landscape"
+                alt="Branding Project"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
+              >
+                <a
+                  href="https://readdy.ai/home/a7ff011b-7542-4576-87a4-e817e6b66b57/ff925918-efec-4ac7-9aad-100e3033ab00"
+                  data-readdy="true"
+                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+                  >View Project</a
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block px-3 py-1 bg-indigo-100 text-primary text-xs font-medium rounded-full mb-3"
+                >Branding</span
+              >
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                Aromatic Brew Café
+              </h3>
+              <p class="text-gray-600">
+                Complete brand identity design for an upscale coffee chain,
+                including logo, packaging, and store elements.
+              </p>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div
+            class="project-card hover-card bg-white rounded-lg overflow-hidden shadow-md"
+            data-category="ui-ux"
+          >
+            <div class="relative overflow-hidden h-64">
+              <img
+                src="https://readdy.ai/api/search-image?query=Modern%20UI%2FUX%20design%20for%20a%20fitness%20mobile%20application%2C%20showing%20multiple%20screens%20with%20clean%20interface%2C%20exercise%20tracking%20features%2C%20and%20user%20dashboard%2C%20professional%20quality%20mockup%20on%20a%20clean%20background&width=600&height=400&seq=4&orientation=landscape"
+                alt="UI/UX Project"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
+              >
+                <a
+                  href="https://readdy.ai/home/a7ff011b-7542-4576-87a4-e817e6b66b57/ff925918-efec-4ac7-9aad-100e3033ab00"
+                  data-readdy="true"
+                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+                  >View Project</a
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block px-3 py-1 bg-indigo-100 text-primary text-xs font-medium rounded-full mb-3"
+                >UI/UX</span
+              >
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                FitTrack Mobile App
+              </h3>
+              <p class="text-gray-600">
+                User interface and experience design for a fitness tracking
+                application with comprehensive health analytics.
+              </p>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div
+            class="project-card hover-card bg-white rounded-lg overflow-hidden shadow-md"
+            data-category="illustration"
+          >
+            <div class="relative overflow-hidden h-64">
+              <img
+                src="https://readdy.ai/api/search-image?query=Creative%20digital%20illustration%20series%20for%20a%20childrens%20book%2C%20showing%20colorful%20characters%20and%20fantasy%20landscapes%2C%20professional%20quality%20illustration%20work%20with%20vibrant%20colors%20and%20engaging%20style&width=600&height=400&seq=5&orientation=landscape"
+                alt="Illustration Project"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
+              >
+                <a
+                  href="https://readdy.ai/home/a7ff011b-7542-4576-87a4-e817e6b66b57/ff925918-efec-4ac7-9aad-100e3033ab00"
+                  data-readdy="true"
+                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+                  >View Project</a
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block px-3 py-1 bg-indigo-100 text-primary text-xs font-medium rounded-full mb-3"
+                >Illustration</span
+              >
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                Dreamland Stories
+              </h3>
+              <p class="text-gray-600">
+                Series of whimsical illustrations for a children's book
+                exploring magical worlds and fantastical creatures.
+              </p>
+            </div>
+          </div>
+          <!-- Project 4 -->
+          <div
+            class="project-card hover-card bg-white rounded-lg overflow-hidden shadow-md"
+            data-category="branding"
+          >
+            <div class="relative overflow-hidden h-64">
+              <img
+                src="https://readdy.ai/api/search-image?query=Elegant%20branding%20project%20for%20a%20luxury%20skincare%20line%2C%20featuring%20packaging%20design%2C%20logo%2C%20typography%2C%20and%20brand%20identity%20elements%20on%20a%20clean%20background%20with%20soft%20lighting%2C%20professional%20quality%20graphic%20design%20work&width=600&height=400&seq=6&orientation=landscape"
+                alt="Branding Project"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
+              >
+                <a
+                  href="https://readdy.ai/home/a7ff011b-7542-4576-87a4-e817e6b66b57/ff925918-efec-4ac7-9aad-100e3033ab00"
+                  data-readdy="true"
+                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+                  >View Project</a
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block px-3 py-1 bg-indigo-100 text-primary text-xs font-medium rounded-full mb-3"
+                >Branding</span
+              >
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                Lumina Skincare
+              </h3>
+              <p class="text-gray-600">
+                Sophisticated brand identity and packaging design for a premium
+                organic skincare collection.
+              </p>
+            </div>
+          </div>
+          <!-- Project 5 -->
+          <div
+            class="project-card hover-card bg-white rounded-lg overflow-hidden shadow-md"
+            data-category="ui-ux"
+          >
+            <div class="relative overflow-hidden h-64">
+              <img
+                src="https://readdy.ai/api/search-image?query=Professional%20e-commerce%20website%20design%20showing%20multiple%20pages%20including%20home%20page%2C%20product%20listings%2C%20and%20checkout%20process%2C%20clean%20and%20modern%20UI%20design%20with%20attention%20to%20user%20experience%2C%20professional%20quality%20web%20design&width=600&height=400&seq=7&orientation=landscape"
+                alt="UI/UX Project"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
+              >
+                <a
+                  href="https://readdy.ai/home/a7ff011b-7542-4576-87a4-e817e6b66b57/ff925918-efec-4ac7-9aad-100e3033ab00"
+                  data-readdy="true"
+                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+                  >View Project</a
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block px-3 py-1 bg-indigo-100 text-primary text-xs font-medium rounded-full mb-3"
+                >UI/UX</span
+              >
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                Artisan Market E-Commerce
+              </h3>
+              <p class="text-gray-600">
+                Comprehensive website design for an online marketplace featuring
+                handcrafted products from global artisans.
+              </p>
+            </div>
+          </div>
+          <!-- Project 6 -->
+          <div
+            class="project-card hover-card bg-white rounded-lg overflow-hidden shadow-md"
+            data-category="illustration"
+          >
+            <div class="relative overflow-hidden h-64">
+              <img
+                src="https://readdy.ai/api/search-image?query=Modern%20digital%20art%20series%20featuring%20abstract%20geometric%20compositions%20with%20vibrant%20colors%20and%20dynamic%20shapes%2C%20professional%20quality%20illustration%20work%20with%20contemporary%20aesthetic%2C%20clean%20background&width=600&height=400&seq=8&orientation=landscape"
+                alt="Illustration Project"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
+              >
+                <a
+                  href="https://readdy.ai/home/a7ff011b-7542-4576-87a4-e817e6b66b57/ff925918-efec-4ac7-9aad-100e3033ab00"
+                  data-readdy="true"
+                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+                  >View Project</a
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block px-3 py-1 bg-indigo-100 text-primary text-xs font-medium rounded-full mb-3"
+                >Illustration</span
+              >
+              <h3 class="text-xl font-bold text-gray-900 mb-2">
+                Geometric Visions
+              </h3>
+              <p class="text-gray-600">
+                Series of abstract digital artworks exploring the relationship
+                between color, shape, and emotion.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 star-bg">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center text-white-900 mb-4">
+          Let's Work Together
+        </h2>
+        <p class="text-lg text-center text-white-600 mb-12">
+          Have a project in mind? I'd love to hear about it. Let's create
+          something amazing together.
+        </p>
+        <div
+          class="max-w-3xl mx-auto bg-[#1a1a3a] rounded-lg shadow-lg shadow-purple-500/20 p-8 md:p-12 border border-purple-500/20"
+        >
+          <form id="contact-form">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+              <div>
+                <label
+                  for="first-name"
+                  class="block text-sm font-medium text-white-700 mb-2"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  id="first-name"
+                  name="first-name"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  required
+                />
+              </div>
+              <div>
+                <label
+                  for="last-name"
+                  class="block text-sm font-medium text-white-700 mb-2"
+                  >Last Name</label
+                >
+                <input
+                  type="text"
+                  id="last-name"
+                  name="last-name"
+                  class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  required
+                />
+              </div>
+            </div>
+            <div class="mb-6">
+              <label
+                for="email"
+                class="block text-sm font-medium text-white-700 mb-2"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                required
+              />
+            </div>
+            <div class="mb-6">
+              <label
+                for="project-type"
+                class="block text-sm font-medium text-white-700 mb-2"
+                >Project Type</label
+              >
+              <div class="relative">
+                <div
+                  class="w-full px-4 py-3 border border-gray-300 rounded flex items-center justify-between cursor-pointer"
+                  id="project-type-button"
+                >
+                  <span id="project-type-text">Select project type</span>
+                  <div class="w-5 h-5 flex items-center justify-center">
+                    <i class="ri-arrow-down-s-line"></i>
+                  </div>
+                </div>
+                <div
+                  class="absolute z-10 w-full mt-1 bg-gray-0 border border-gray-300 rounded shadow-lg hidden"
+                  id="project-type-dropdown"
+                >
+                  <div class="py-2">
+                    <div
+                      class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="branding"
+                    >
+                      Branding & Identity
+                    </div>
+                    <div
+                      class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="ui-ux"
+                    >
+                      UI/UX Design
+                    </div>
+                    <div
+                      class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="illustration"
+                    >
+                      Illustration
+                    </div>
+                    <div
+                      class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="print"
+                    >
+                      Print Design
+                    </div>
+                    <div
+                      class="px-4 py-2 hover:bg-gray-100 cursor-pointer"
+                      data-value="other"
+                    >
+                      Other
+                    </div>
+                  </div>
+                </div>
+                <input
+                  type="hidden"
+                  id="project-type"
+                  name="project-type"
+                  value=""
+                />
+              </div>
+            </div>
+            <div class="mb-6">
+              <label
+                for="message"
+                class="block text-sm font-medium text-white-700 mb-2"
+                >Your Message</label
+              >
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                class="w-full px-4 py-3 border  border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                required
+              ></textarea>
+            </div>
+            <div class="mb-8">
+              <label class="flex items-center">
+                <input type="checkbox" class="custom-checkbox" required />
+                <span class="ml-2 text-sm text-white-600"
+                  >I agree to the processing of my personal data to be contacted
+                  about my request</span
+                >
+              </label>
+            </div>
+            <button
+              type="submit"
+              class="w-full px-6 py-3 bg-primary text-white font-medium rounded-button hover:bg-indigo-600 transition-colors shadow-md whitespace-nowrap"
+            >
+              Send Message
+            </button>
+          </form>
+          <div class="mt-12 pt-8 border-t border-gray-200">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h3 class="text-lg font-semibold text-white-900 mb-4">
+                  Contact Information
+                </h3>
+                <ul class="space-y-3">
+                  <li class="flex items-start">
+                    <div
+                      class="w-5 h-5 flex items-center justify-center text-primary mt-1"
+                    >
+                      <i class="ri-mail-line"></i>
+                    </div>
+                    <span class="ml-3 text-white-700">hello@zeeldevani.com</span>
+                  </li>
+                  <li class="flex items-start">
+                    <div
+                      class="w-5 h-5 flex items-center justify-center text-primary mt-1"
+                    >
+                      <i class="ri-phone-line"></i>
+                    </div>
+                    <span class="ml-3 text-white-700">+91 9876 543 210</span>
+                  </li>
+                  <li class="flex items-start">
+                    <div
+                      class="w-5 h-5 flex items-center justify-center text-primary mt-1"
+                    >
+                      <i class="ri-map-pin-line"></i>
+                    </div>
+                    <span class="ml-3 text-white-700">Mumbai, India</span>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h3 class="text-lg font-semibold text-white-900 mb-4">
+                  Follow Me
+                </h3>
+                <div class="flex space-x-4">
+                  <a
+                    href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-primary hover:text-white transition-colors"
+                  >
+                    <i class="ri-instagram-line"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-primary hover:text-white transition-colors"
+                  >
+                    <i class="ri-behance-line"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-primary hover:text-white transition-colors"
+                  >
+                    <i class="ri-dribbble-line"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-primary hover:text-white transition-colors"
+                  >
+                    <i class="ri-linkedin-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-[#0B0B1F] text-white py-12 border-t border-purple-500/20">
+      <div class="container mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-6 md:mb-0">
+            <a href="#" class="text-2xl font-['Pacifico'] text-white"
+              >Zeel Devani</a
+            >
+            <p class="mt-2 text-gray-400">
+              Creative Designer & Visual Storyteller
+            </p>
+          </div>
+          <div class="flex flex-wrap justify-center gap-6 mb-6 md:mb-0">
+            <a
+              href="#home"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="text-gray-400 hover:text-white transition-colors"
+              >About</a
+            >
+            <a
+              href="#projects"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Projects</a
+            >
+            <a
+              href="#contact"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Contact</a
+            >
+          </div>
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-primary hover:text-white transition-colors"
+            >
+              <i class="ri-instagram-line"></i>
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-primary hover:text-white transition-colors"
+            >
+              <i class="ri-behance-line"></i>
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-primary hover:text-white transition-colors"
+            >
+              <i class="ri-dribbble-line"></i>
+            </a>
+            <a
+              href="#"
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-primary hover:text-white transition-colors"
+            >
+              <i class="ri-linkedin-line"></i>
+            </a>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-500 text-sm">
+            © 2025 Zeel Devani. All rights reserved.
+          </p>
+          <button
+            id="back-to-top"
+            class="mt-4 md:mt-0 flex items-center text-gray-400 hover:text-white transition-colors"
+          >
+            <span class="mr-2">Back to Top</span>
+            <i class="ri-arrow-up-line"></i>
+          </button>
+        </div>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script id="mobile-menu-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+          if (mobileMenu.classList.contains("hidden")) {
+            mobileMenuButton.innerHTML = '<i class="ri-menu-line ri-lg"></i>';
+          } else {
+            mobileMenuButton.innerHTML = '<i class="ri-close-line ri-lg"></i>';
+          }
+        });
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("hidden");
+            mobileMenuButton.innerHTML = '<i class="ri-menu-line ri-lg"></i>';
+          });
+        });
+      });
+    </script>
+    <script id="navigation-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-link");
+        // Handle smooth scrolling for navigation links
+        navLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href").substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+              const headerOffset = 80;
+              const elementPosition = targetSection.getBoundingClientRect().top;
+              const offsetPosition =
+                elementPosition + window.pageYOffset - headerOffset;
+              window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+        // Update active state on scroll
+        window.addEventListener("scroll", function () {
+          let current = "";
+          sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.pageYOffset >= sectionTop - 300) {
+              current = section.getAttribute("id");
+            }
+          });
+          navLinks.forEach((link) => {
+            link.classList.remove("active");
+            if (link.getAttribute("href").substring(1) === current) {
+              link.classList.add("active");
+            }
+          });
+        });
+        // Back to top button
+        const backToTopButton = document.getElementById("back-to-top");
+        backToTopButton.addEventListener("click", function () {
+          window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+          });
+        });
+      });
+    </script>
+    <script id="project-filter-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const filterButtons = document.querySelectorAll(".filter-btn");
+        const projectCards = document.querySelectorAll(".project-card");
+        filterButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            // Remove active class from all buttons
+            filterButtons.forEach((btn) => btn.classList.remove("active"));
+            // Add active class to clicked button
+            this.classList.add("active");
+            const filter = this.getAttribute("data-filter");
+            projectCards.forEach((card) => {
+              if (filter === "all" || card.getAttribute("data-category") === filter) {
+                card.style.display = "block";
+              } else {
+                card.style.display = "none";
+              }
+            });
+          });
+        });
+      });
+    </script>
+    <script id="dropdown-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const dropdownButton = document.getElementById("project-type-button");
+        const dropdown = document.getElementById("project-type-dropdown");
+        const dropdownText = document.getElementById("project-type-text");
+        const dropdownOptions = dropdown.querySelectorAll("[data-value]");
+        const hiddenInput = document.getElementById("project-type");
+        dropdownButton.addEventListener("click", function () {
+          dropdown.classList.toggle("hidden");
+        });
+        dropdownOptions.forEach((option) => {
+          option.addEventListener("click", function () {
+            const value = this.getAttribute("data-value");
+            const text = this.textContent;
+            dropdownText.textContent = text;
+            hiddenInput.value = value;
+            dropdown.classList.add("hidden");
+          });
+        });
+        // Close dropdown when clicking outside
+        document.addEventListener("click", function (event) {
+          if (
+            !dropdownButton.contains(event.target) &&
+            !dropdown.contains(event.target)
+          ) {
+            dropdown.classList.add("hidden");
+          }
+        });
+      });
+    </script>
+    <script id="form-script">
+      document.addEventListener("DOMContentLoaded", function () {
+        const contactForm = document.getElementById("contact-form");
+        contactForm.addEventListener("submit", function (event) {
+          event.preventDefault();
+          // Form validation
+          const firstName = document.getElementById("first-name").value;
+          const lastName = document.getElementById("last-name").value;
+          const email = document.getElementById("email").value;
+          const projectType = document.getElementById("project-type").value;
+          const message = document.getElementById("message").value;
+          if (!firstName || !lastName || !email || !projectType || !message) {
+            alert("Please fill in all required fields");
+            return;
+          }
+          // Email validation
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            alert("Please enter a valid email address");
+            return;
+          }
+          // Form submission would go here
+          alert("Thank you for your message! I will get back to you soon.");
+          contactForm.reset();
+          document.getElementById("project-type-text").textContent =
+            "Select project type";
+        });
+      });
+    </script>
+  </body>
+</html>
