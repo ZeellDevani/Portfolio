@@ -40,107 +40,7 @@
         },
       };
     </script>
-    <style>
-      :where([class^="ri-"])::before { content: "\f3c2"; }
-      html {
-      scroll-behavior: smooth;
-      }
-      body {
-      font-family: 'Inter', sans-serif;
-      background: #0B0B1F;
-      color: #fff;
-      }
-      h1, h2, h3, h4, h5, h6 {
-      font-family: 'Playfair Display', serif;
-      }
-      .gradient-bg {
-      background: linear-gradient(135deg, rgba(11,11,31,0.9) 0%, rgba(45,45,85,0.9) 100%);
-      }
-      .star-bg {
-      background: radial-gradient(circle at center, #1a1a3a 0%, #0B0B1F 100%);
-      position: relative;
-      overflow: hidden;
-      }
-      .star-bg::before {
-      content: '';
-      position: absolute;
-      width: 200%;
-      height: 200%;
-      top: -50%;
-      left: -50%;
-      background-image:
-      radial-gradient(2px 2px at 40px 60px, #fff 100%, transparent),
-      radial-gradient(2px 2px at 20px 50px, #fff 100%, transparent),
-      radial-gradient(2px 2px at 30px 100px, #fff 100%, transparent),
-      radial-gradient(2px 2px at 40px 60px, #fff 100%, transparent),
-      radial-gradient(2px 2px at 110px 90px, #fff 100%, transparent),
-      radial-gradient(2px 2px at 190px 150px, #fff 100%, transparent);
-      background-repeat: repeat;
-      background-size: 200px 200px;
-      animation: stars 100s linear infinite;
-      opacity: 0.5;
-      }
-      @keyframes stars {
-      from {transform: rotate(0deg);}
-      to {transform: rotate(360deg);}
-      }
-      .hover-card {
-      transition: all 0.3s ease;
-      }
-      .hover-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-      }
-      .custom-checkbox {
-      appearance: none;
-      -webkit-appearance: none;
-      height: 20px;
-      width: 20px;
-      /* background-color: #fff; */
-      border: 2px solid #e2e8f0;
-      border-radius: 4px;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      outline: none;
-      }
-      .custom-checkbox:checked {
-      background-color: #6366f1;
-      border-color: #6366f1;
-      }
-      .custom-checkbox:checked::after {
-      content: "✓";
-      /* color: white; */
-      font-size: 14px;
-      }
-      input[type="number"]::-webkit-inner-spin-button,
-      input[type="number"]::-webkit-outer-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-      }
-      .nav-link {
-      position: relative;
-      }
-      .nav-link::after {
-      content: '';
-      position: absolute;
-      width: 0;
-      height: 2px;
-      bottom: -4px;
-      left: 0;
-      background-color: #6366f1;
-      transition: width 0.3s ease;
-      }
-      .nav-link:hover::after,
-      .nav-link.active::after {
-      width: 100%;
-      }
-      .filter-btn.active {
-      background-color: #6366f1;
-      /* color: white; */
-      }
-    </style>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body class="bg-white">
     <!-- Header -->
@@ -150,7 +50,7 @@
       <div
         class="container mx-auto px-6 py-4 flex justify-between items-center"
       >
-        <a href="#" class="text-2xl font-['Pacifico'] text-gray-800"
+        <a href="#" class="text-2xl font-['Pacifico'] text-gray-800 brand-logo"
           >Zeel Devani</a
         >
         <!-- Desktop Navigation -->
@@ -330,10 +230,11 @@
             </div>
             <a
               href="#"
-              class="inline-flex items-center px-6 py-3 bg-blue-800 text-white font-medium rounded-button hover:bg-gray-700 transition-colors shadow-md whitespace-nowrap"
+              class="inline-flex items-center px-6 py-3 bg-blue-800 text-white font-medium rounded-button hover:bg-gray-700 transition-colors shadow-md whitespace-nowrap download-cv-btn"
+              id="download-cv-btn"
             >
               <i class="ri-download-line mr-2"></i>
-              Download CV
+              Download Resume
             </a>
           </div>
         </div>
@@ -394,7 +295,7 @@
                 <a
                   href="https://readdy.ai/home/a7ff011b-7542-4576-87a4-e817e6b66b57/ff925918-efec-4ac7-9aad-100e3033ab00"
                   data-readdy="true"
-                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap project-view-btn"
                   >View Project</a
                 >
               </div>
@@ -430,7 +331,7 @@
                 <a
                   href="https://readdy.ai/home/a7ff011b-7542-4576-87a4-e817e6b66b57/ff925918-efec-4ac7-9aad-100e3033ab00"
                   data-readdy="true"
-                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap project-view-btn"
                   >View Project</a
                 >
               </div>
@@ -466,7 +367,7 @@
                 <a
                   href="https://readdy.ai/home/a7ff011b-7542-4576-87a4-e817e6b66b57/ff925918-efec-4ac7-9aad-100e3033ab00"
                   data-readdy="true"
-                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap project-view-btn"
                   >View Project</a
                 >
               </div>
@@ -502,7 +403,7 @@
                 <a
                   href="https://readdy.ai/home/a7ff011b-7542-4576-87a4-e817e6b66b57/ff925918-efec-4ac7-9aad-100e3033ab00"
                   data-readdy="true"
-                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap project-view-btn"
                   >View Project</a
                 >
               </div>
@@ -538,7 +439,7 @@
                 <a
                   href="https://readdy.ai/home/a7ff011b-7542-4576-87a4-e817e6b66b57/ff925918-efec-4ac7-9aad-100e3033ab00"
                   data-readdy="true"
-                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap project-view-btn"
                   >View Project</a
                 >
               </div>
@@ -574,7 +475,7 @@
                 <a
                   href="https://readdy.ai/home/a7ff011b-7542-4576-87a4-e817e6b66b57/ff925918-efec-4ac7-9aad-100e3033ab00"
                   data-readdy="true"
-                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap project-view-btn"
                   >View Project</a
                 >
               </div>
@@ -662,7 +563,7 @@
               >
               <div class="relative">
                 <div
-                  class="w-full px-4 py-3 border border-gray-300 rounded flex items-center justify-between cursor-pointer"
+                  class="w-full px-4 py-3 border border-gray-300 rounded flex items-center justify-between cursor-pointer bg-white text-gray-900"
                   id="project-type-button"
                 >
                   <span id="project-type-text">Select project type</span>
@@ -671,7 +572,7 @@
                   </div>
                 </div>
                 <div
-                  class="absolute z-10 w-full mt-1 bg-gray-0 border border-gray-300 rounded shadow-lg hidden"
+                  class="absolute z-10 w-full mt-1 bg-white border border-gray-300 rounded shadow-lg hidden"
                   id="project-type-dropdown"
                 >
                   <div class="py-2">
@@ -725,7 +626,7 @@
                 id="message"
                 name="message"
                 rows="5"
-                class="w-full px-4 py-3 border  border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                class="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
                 required
               ></textarea>
             </div>
@@ -751,14 +652,14 @@
                 <h3 class="text-lg font-semibold text-white-900 mb-4">
                   Contact Information
                 </h3>
-                <ul class="space-y-3">
+                <ul class="space-y-3 contact-info">
                   <li class="flex items-start">
                     <div
                       class="w-5 h-5 flex items-center justify-center text-primary mt-1"
                     >
                       <i class="ri-mail-line"></i>
                     </div>
-                    <span class="ml-3 text-white-700">hello@zeeldevani.com</span>
+                    <span class="ml-3 text-white-700" id="email-contact">hello@zeeldevani.com</span>
                   </li>
                   <li class="flex items-start">
                     <div
@@ -766,7 +667,7 @@
                     >
                       <i class="ri-phone-line"></i>
                     </div>
-                    <span class="ml-3 text-white-700">+91 9876 543 210</span>
+                    <span class="ml-3 text-white-700" id="phone-contact">+91 9876 543 210</span>
                   </li>
                   <li class="flex items-start">
                     <div
@@ -783,27 +684,31 @@
                   Follow Me
                 </h3>
                 <div class="flex space-x-4">
-                  <a
+                  <!-- <a
                     href="#"
-                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-primary hover:text-white transition-colors"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-primary hover:text-white transition-colors social-link"
+                    id="instagram-link"
                   >
                     <i class="ri-instagram-line"></i>
-                  </a>
+                  </a> -->
                   <a
                     href="#"
-                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-primary hover:text-white transition-colors"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-primary hover:text-white transition-colors social-link"
+                    id="behance-link"
                   >
                     <i class="ri-behance-line"></i>
                   </a>
-                  <a
+                  <!-- <a
                     href="#"
-                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-primary hover:text-white transition-colors"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-primary hover:text-white transition-colors social-link"
+                    id="dribbble-link"
                   >
                     <i class="ri-dribbble-line"></i>
-                  </a>
+                  </a> -->
                   <a
                     href="#"
-                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-primary hover:text-white transition-colors"
+                    class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 text-gray-700 hover:bg-primary hover:text-white transition-colors social-link"
+                    id="linkedin-link"
                   >
                     <i class="ri-linkedin-line"></i>
                   </a>
@@ -819,7 +724,7 @@
       <div class="container mx-auto px-6">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <div class="mb-6 md:mb-0">
-            <a href="#" class="text-2xl font-['Pacifico'] text-white"
+            <a href="#" class="text-2xl font-['Pacifico'] text-white brand-logo"
               >Zeel Devani</a
             >
             <p class="mt-2 text-gray-400">
@@ -849,27 +754,31 @@
             >
           </div>
           <div class="flex space-x-4">
-            <a
+            <!-- <a
               href="#"
-              class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-primary hover:text-white transition-colors"
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-primary hover:text-white transition-colors social-link"
+              id="footer-instagram-link"
             >
               <i class="ri-instagram-line"></i>
-            </a>
+            </a> -->
             <a
               href="#"
-              class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-primary hover:text-white transition-colors"
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-primary hover:text-white transition-colors social-link"
+              id="footer-behance-link"
             >
               <i class="ri-behance-line"></i>
             </a>
-            <a
+            <!-- <a
               href="#"
-              class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-primary hover:text-white transition-colors"
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-primary hover:text-white transition-colors social-link"
+              id="footer-dribbble-link"
             >
               <i class="ri-dribbble-line"></i>
-            </a>
+            </a> -->
             <a
               href="#"
-              class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-primary hover:text-white transition-colors"
+              class="w-10 h-10 flex items-center justify-center rounded-full bg-gray-800 text-gray-400 hover:bg-primary hover:text-white transition-colors social-link"
+              id="footer-linkedin-link"
             >
               <i class="ri-linkedin-line"></i>
             </a>
@@ -892,157 +801,6 @@
       </div>
     </footer>
     <!-- Scripts -->
-    <script id="mobile-menu-script">
-      document.addEventListener("DOMContentLoaded", function () {
-        const mobileMenuButton = document.getElementById("mobile-menu-button");
-        const mobileMenu = document.getElementById("mobile-menu");
-        mobileMenuButton.addEventListener("click", function () {
-          mobileMenu.classList.toggle("hidden");
-          if (mobileMenu.classList.contains("hidden")) {
-            mobileMenuButton.innerHTML = '<i class="ri-menu-line ri-lg"></i>';
-          } else {
-            mobileMenuButton.innerHTML = '<i class="ri-close-line ri-lg"></i>';
-          }
-        });
-        // Close mobile menu when clicking on a link
-        const mobileLinks = mobileMenu.querySelectorAll("a");
-        mobileLinks.forEach((link) => {
-          link.addEventListener("click", function () {
-            mobileMenu.classList.add("hidden");
-            mobileMenuButton.innerHTML = '<i class="ri-menu-line ri-lg"></i>';
-          });
-        });
-      });
-    </script>
-    <script id="navigation-script">
-      document.addEventListener("DOMContentLoaded", function () {
-        const sections = document.querySelectorAll("section");
-        const navLinks = document.querySelectorAll(".nav-link");
-        // Handle smooth scrolling for navigation links
-        navLinks.forEach((link) => {
-          link.addEventListener("click", function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetSection = document.getElementById(targetId);
-            if (targetSection) {
-              const headerOffset = 80;
-              const elementPosition = targetSection.getBoundingClientRect().top;
-              const offsetPosition =
-                elementPosition + window.pageYOffset - headerOffset;
-              window.scrollTo({
-                top: offsetPosition,
-                behavior: "smooth",
-              });
-            }
-          });
-        });
-        // Update active state on scroll
-        window.addEventListener("scroll", function () {
-          let current = "";
-          sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            if (window.pageYOffset >= sectionTop - 300) {
-              current = section.getAttribute("id");
-            }
-          });
-          navLinks.forEach((link) => {
-            link.classList.remove("active");
-            if (link.getAttribute("href").substring(1) === current) {
-              link.classList.add("active");
-            }
-          });
-        });
-        // Back to top button
-        const backToTopButton = document.getElementById("back-to-top");
-        backToTopButton.addEventListener("click", function () {
-          window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-          });
-        });
-      });
-    </script>
-    <script id="project-filter-script">
-      document.addEventListener("DOMContentLoaded", function () {
-        const filterButtons = document.querySelectorAll(".filter-btn");
-        const projectCards = document.querySelectorAll(".project-card");
-        filterButtons.forEach((button) => {
-          button.addEventListener("click", function () {
-            // Remove active class from all buttons
-            filterButtons.forEach((btn) => btn.classList.remove("active"));
-            // Add active class to clicked button
-            this.classList.add("active");
-            const filter = this.getAttribute("data-filter");
-            projectCards.forEach((card) => {
-              if (filter === "all" || card.getAttribute("data-category") === filter) {
-                card.style.display = "block";
-              } else {
-                card.style.display = "none";
-              }
-            });
-          });
-        });
-      });
-    </script>
-    <script id="dropdown-script">
-      document.addEventListener("DOMContentLoaded", function () {
-        const dropdownButton = document.getElementById("project-type-button");
-        const dropdown = document.getElementById("project-type-dropdown");
-        const dropdownText = document.getElementById("project-type-text");
-        const dropdownOptions = dropdown.querySelectorAll("[data-value]");
-        const hiddenInput = document.getElementById("project-type");
-        dropdownButton.addEventListener("click", function () {
-          dropdown.classList.toggle("hidden");
-        });
-        dropdownOptions.forEach((option) => {
-          option.addEventListener("click", function () {
-            const value = this.getAttribute("data-value");
-            const text = this.textContent;
-            dropdownText.textContent = text;
-            hiddenInput.value = value;
-            dropdown.classList.add("hidden");
-          });
-        });
-        // Close dropdown when clicking outside
-        document.addEventListener("click", function (event) {
-          if (
-            !dropdownButton.contains(event.target) &&
-            !dropdown.contains(event.target)
-          ) {
-            dropdown.classList.add("hidden");
-          }
-        });
-      });
-    </script>
-    <script id="form-script">
-      document.addEventListener("DOMContentLoaded", function () {
-        const contactForm = document.getElementById("contact-form");
-        contactForm.addEventListener("submit", function (event) {
-          event.preventDefault();
-          // Form validation
-          const firstName = document.getElementById("first-name").value;
-          const lastName = document.getElementById("last-name").value;
-          const email = document.getElementById("email").value;
-          const projectType = document.getElementById("project-type").value;
-          const message = document.getElementById("message").value;
-          if (!firstName || !lastName || !email || !projectType || !message) {
-            alert("Please fill in all required fields");
-            return;
-          }
-          // Email validation
-          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-          if (!emailRegex.test(email)) {
-            alert("Please enter a valid email address");
-            return;
-          }
-          // Form submission would go here
-          alert("Thank you for your message! I will get back to you soon.");
-          contactForm.reset();
-          document.getElementById("project-type-text").textContent =
-            "Select project type";
-        });
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
-</html>
+</html> 

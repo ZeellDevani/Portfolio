@@ -1,0 +1,264 @@
+:where([class^="ri-"])::before { 
+  content: "\f3c2"; 
+}
+
+html {
+  scroll-behavior: smooth;
+  
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0B0B1F;
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, rgba(11,11,31,0.9) 0%, rgba(45,45,85,0.9) 100%);
+}
+
+.star-bg {
+  background: radial-gradient(circle at center, #1a1a3a 0%, #0B0B1F 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.star-bg::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background-image:
+    radial-gradient(2px 2px at 40px 60px, #fff 100%, transparent),
+    radial-gradient(2px 2px at 20px 50px, #fff 100%, transparent),
+    radial-gradient(2px 2px at 30px 100px, #fff 100%, transparent),
+    radial-gradient(2px 2px at 40px 60px, #fff 100%, transparent),
+    radial-gradient(2px 2px at 110px 90px, #fff 100%, transparent),
+    radial-gradient(2px 2px at 190px 150px, #fff 100%, transparent);
+  background-repeat: repeat;
+  background-size: 200px 200px;
+  animation: stars 100s linear infinite;
+  opacity: 0.5;
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+
+@keyframes stars {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
+
+.hover-card {
+  transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.custom-checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border: 2px solid #d1d5db;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  background-color: white !important;
+  position: relative !important;
+  z-index: 25 !important;
+  pointer-events: auto !important;
+  user-select: auto !important;
+}
+
+.custom-checkbox:checked {
+  background-color: #7B68EE !important;
+  border-color: #7B68EE !important;
+}
+
+.custom-checkbox:checked::after {
+  content: "✓";
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  display: block !important;
+  line-height: 1 !important;
+  text-align: center !important;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #6366f1;
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
+
+.filter-btn.active {
+  background-color: #6366f1;
+}
+
+/* Contact Information Clickable Styles */
+.contact-info span {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.contact-info span:hover {
+  color: #7B68EE !important;
+  text-decoration: underline;
+}
+
+/* Social Media Links Hover Effects */
+.social-link {
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Download CV Button Hover */
+.download-cv-btn {
+  transition: all 0.3s ease;
+}
+
+.download-cv-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Project View Button Hover */
+.project-view-btn {
+  transition: all 0.3s ease;
+}
+
+.project-view-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Brand Logo Hover */
+.brand-logo {
+  transition: all 0.3s ease;
+}
+
+.brand-logo:hover {
+  transform: scale(1.05);
+}
+
+/* Form Input Styling Fixes */
+#contact-form input,
+#contact-form textarea {
+  background-color: white !important;
+  color: #333 !important;
+  border: 1px solid #d1d5db !important;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: #7B68EE !important;
+  box-shadow: 0 0 0 3px rgba(123, 104, 238, 0.1) !important;
+}
+
+/* Dropdown Styling Fixes */
+#project-type-dropdown {
+  background-color: white !important;
+  color: #333 !important;
+  border: 1px solid #d1d5db !important;
+}
+
+#project-type-dropdown .px-4 {
+  color: #333 !important;
+}
+
+#project-type-dropdown .px-4:hover {
+  background-color: #f3f4f6 !important;
+}
+
+#project-type-button {
+  background-color: white !important;
+  color: #333 !important;
+  border: 1px solid #d1d5db !important;
+}
+
+#project-type-text {
+  color: #333 !important;
+}
+
+/* Additional Form Fixes */
+#contact-form {
+  position: relative !important;
+  z-index: 20 !important;
+}
+
+#contact-form input,
+#contact-form textarea,
+#contact-form button,
+#contact-form .custom-checkbox {
+  position: relative !important;
+  z-index: 25 !important;
+  pointer-events: auto !important;
+}
+
+#project-type-button,
+#project-type-dropdown {
+  position: relative !important;
+  z-index: 30 !important;
+  pointer-events: auto !important;
+}
+
+/* Ensure form elements are clickable */
+#contact-form * {
+  pointer-events: auto !important;
+}
+
+/* Override any background interference */
+#contact-form input:focus,
+#contact-form textarea:focus {
+  border-color: #7B68EE !important;
+  box-shadow: 0 0 0 3px rgba(123, 104, 238, 0.1) !important;
+  outline: none !important;
+  background-color: white !important;
+  color: #333 !important;
+}
+
+/* Critical Form Fixes */
+#contact-form input,
+#contact-form textarea,
+#contact-form button {
+  pointer-events: auto !important;
+  user-select: auto !important;
+}
