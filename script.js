@@ -215,6 +215,16 @@ document.addEventListener("DOMContentLoaded", function () {
       window.open(behanceUrl, '_blank');
     });
   });
+
+  // GitHub links
+  const githubLinks = document.querySelectorAll('#github-link, #footer-github-link');
+  githubLinks.forEach(link => {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const githubUrl = "https://github.com/ZeellDevani";
+      window.open(githubUrl, '_blank');
+    });
+  });
   
   // Dribbble links
   // const dribbbleLinks = document.querySelectorAll('#dribbble-link, #footer-dribbble-link');
@@ -257,9 +267,11 @@ document.addEventListener("DOMContentLoaded", function () {
   const projectViewButtons = document.querySelectorAll('a[data-readdy="true"]');
   projectViewButtons.forEach(button => {
     button.addEventListener("click", function (e) {
-      e.preventDefault();
-      const projectTitle = this.closest('.project-card').querySelector('h3').textContent;
-      alert(`Opening project: ${projectTitle}\n\nThis would typically open a detailed project page or portfolio view.`);
+      e.preventDefault(); // Prevent default behavior to avoid opening in current tab
+      const href = this.getAttribute('href');
+      if (href && href !== '#') {
+        window.open(href, '_blank');
+      }
     });
   });
 });
