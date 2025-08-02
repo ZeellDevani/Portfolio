@@ -173,17 +173,17 @@ document.addEventListener("DOMContentLoaded", function () {
     downloadCVButton.addEventListener("click", function (e) {
       e.preventDefault();
       
-      // Google Drive file ID from the URL
-      const fileId = "1t-YgC4ybkGGTyB2EaKVN8eJJZ8w9CoEx";
-      
-      // Create direct download link for Google Drive
-      const downloadUrl = `https://drive.google.com/file/d/1yzySAmRf8a5JfnshlKJhUEjHtssv7vFO/view?usp=sharing?export=download&id=${fileId}`;
+    // Google Drive file ID from the URL
+    const fileId = "1yzySAmRf8a5JfnshlKJhUEjHtssv7vFO";
+
+    // Create direct download link for Google Drive
+    const downloadUrl = `https://drive.google.com/uc?export=download&id=${fileId}`;
       
       // Create a temporary link element to trigger download
       const link = document.createElement('a');
       link.href = downloadUrl;
       link.download = 'Zeel_Devani_Resume.pdf';
-      link.target = '_blank';
+      
       
       // Add to DOM, click, and remove
       document.body.appendChild(link);
