@@ -22,7 +22,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .star-bg {
-  background: radial-gradient(circle at center, #1a1a3a 0%, #0B0B1F 100%);
+  /* background: radial-gradient(circle at center, #1a1a3a 0%, #0B0B1F 100%); */
+  background-color: #8D949C;
   position: relative;
   overflow: hidden;
 }
