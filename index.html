@@ -122,46 +122,38 @@
     <!-- <div
       class="absolute inset-0 bg-gradient-to-r from-white/40  to-transparent"
     ></div> -->
-    <!-- Hero Section -->
-    <section
-      id="home"
-      class="w-full min-h-screen pt-24 relative overflow-hidden star-bg bg-center bg-no-repeat bg-cover"
-      style="background-image: url('bg.jpg')"
-    >
-      <div
-        class="container mx-auto px-6 py-20 relative z-10 flex flex-col justify-center h-full"
+   <!-- Hero Section -->
+<section
+  id="home"
+  class="w-full min-h-screen pt-24 relative overflow-hidden star-bg"
+  style="background-image: url('bg.jpg'); background-size: cover; background-position: center right;"
+>
+  <div
+    class="container mx-auto px-6 py-20 relative z-10 flex flex-col justify-center h-full"
+  >
+    <div class="max-w-2xl">
+      <!-- Responsive text color -->
+      <h1
+        class="text-5xl md:text-6xl font-bold text-slate-900 md:text-white leading-tight mb-6"
       >
-        <div class="max-w-2xl">
-          <!-- Responsive heading -->
-          <h1
-            class="text-4xl sm:text-5xl md:text-6xl font-bold text-white-900 md:text-white leading-tight mb-6"
-          >
-            Creative Designer Crafting Visual Stories
-          </h1>
+        Creative Designer Crafting Visual Stories
+      </h1>
 
-          <!-- Responsive paragraph -->
-          <p
-            class="text-lg sm:text-xl md:text-2xl text-white-800 md:text-gray-200 mb-10"
-          >
-            Transforming ideas into compelling visual experiences that captivate
-            and inspire.
-          </p>
+      <p class="text-xl md:text-2xl text-white mb-10">
+        Transforming ideas into compelling visual experiences that captivate
+        and inspire.
+      </p>
 
-          <!-- Responsive button -->
-          <a
-            href="#projects"
-            class="inline-flex items-center px-6 sm:px-8 py-3 bg-gray-200 text-black font-medium rounded-button hover:bg-gray-500 transition-colors shadow-md whitespace-nowrap"
-          >
-            View My Work
-            <i class="ri-arrow-right-line ml-2"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- Optional dark overlay for better text visibility -->
-      <div class="absolute inset-0 bg-black/30 md:bg-transparent"></div>
-    </section>
-
+      <a
+        href="#projects"
+        class="inline-flex items-center px-8 py-3 bg-gray-200 text-black font-medium rounded-button hover:bg-gray-500 transition-colors shadow-md whitespace-nowrap"
+      >
+        View My Work
+        <i class="ri-arrow-right-line ml-2"></i>
+      </a>
+    </div>
+  </div>
+</section>
     <!-- About Section -->
     <section id="about" class="py-20 star-bg">
       <div class="container mx-auto px-6">
@@ -944,3 +936,4 @@
     <script src="script.js"></script>
   </body>
 </html>
+
