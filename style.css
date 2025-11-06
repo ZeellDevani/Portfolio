@@ -29,7 +29,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .star-bg::before {
-  /* content: ''; */
+  content: '';
   position: absolute;
   width: 200%;
   height: 200%;
@@ -263,3 +263,4 @@ input[type="number"]::-webkit-outer-spin-button {
   pointer-events: auto !important;
   user-select: auto !important;
 }
+
