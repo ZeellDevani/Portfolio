@@ -23,24 +23,24 @@
       tailwind.config = {
         theme: {
           extend: {
-            colors: { primary: "#7B68EE", secondary: "#9370DB" },
+            colors: { primary: '#7B68EE', secondary: '#9370DB' },
             borderRadius: {
-              none: "0px",
-              sm: "4px",
-              DEFAULT: "8px",
-              md: "12px",
-              lg: "16px",
-              xl: "20px",
-              "2xl": "24px",
-              "3xl": "32px",
-              full: "9999px",
-              button: "8px",
+              none: '0px',
+              sm: '4px',
+              DEFAULT: '8px',
+              md: '12px',
+              lg: '16px',
+              xl: '20px',
+              '2xl': '24px',
+              '3xl': '32px',
+              full: '9999px',
+              button: '8px',
             },
           },
         },
       };
     </script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body class="bg-white">
     <!-- Header -->
@@ -113,42 +113,55 @@
         </div>
       </div>
     </header>
+    <!-- <div> delete div and only use style for image
+      style="background-image: url('https://readdy.ai/api/search-image?query=A%20stunning%20cosmic%20scene%20with%20swirling%20galaxies%2C%20nebulas%2C%20and%20stars%2C%20featuring%20deep%20purples%2C%20blues%2C%20and%20subtle%20gold%20accents.%20The%20composition%20shows%20a%20creative%20workspace%20floating%20in%20space%20with%20holographic%20screens%20and%20futuristic%20design%20elements%2C%20creating%20an%20ethereal%20and%20magical%20atmosphere%20perfect%20for%20a%20cosmic-themed%20portfolio&width=1920&height=1080&seq=1&orientation=landscape'); background-size: cover; background-position: center right; "
+
+      https://img.freepik.com/free-photo/flat-lay-workstation-with-copy-space-laptop_23-2148430867.jpg?t=st=1762335424~exp=1762339024~hmac=546c04abe661c092f0a89495b6cf62074db8721cb50e6c65de97d67c880830a1&w=1480
+    </div> -->
+
+    <!-- <div
+      class="absolute inset-0 bg-gradient-to-r from-white/40  to-transparent"
+    ></div> -->
     <!-- Hero Section -->
     <section
       id="home"
-      class="w-full min-h-screen pt-24 relative overflow-hidden star-bg"
-      style="background-image: url('https://img.freepik.com/free-photo/flat-lay-workstation-with-copy-space-laptop_23-2148430867.jpg?t=st=1762335424~exp=1762339024~hmac=546c04abe661c092f0a89495b6cf62074db8721cb50e6c65de97d67c880830a1&w=1480'); background-size: cover; background-position: center right; "
-      >
-      <!-- <div> delete div and only use style for image
-        style="background-image: url('https://readdy.ai/api/search-image?query=A%20stunning%20cosmic%20scene%20with%20swirling%20galaxies%2C%20nebulas%2C%20and%20stars%2C%20featuring%20deep%20purples%2C%20blues%2C%20and%20subtle%20gold%20accents.%20The%20composition%20shows%20a%20creative%20workspace%20floating%20in%20space%20with%20holographic%20screens%20and%20futuristic%20design%20elements%2C%20creating%20an%20ethereal%20and%20magical%20atmosphere%20perfect%20for%20a%20cosmic-themed%20portfolio&width=1920&height=1080&seq=1&orientation=landscape'); background-size: cover; background-position: center right; "
-      </div> -->
-
-      <!-- <div
-        class="absolute inset-0 bg-gradient-to-r from-white/40  to-transparent"
-      ></div> -->
+      class="w-full min-h-screen pt-24 relative overflow-hidden star-bg bg-center bg-no-repeat bg-cover"
+      style="background-image: url('bg.jpg')"
+    >
       <div
         class="container mx-auto px-6 py-20 relative z-10 flex flex-col justify-center h-full"
       >
         <div class="max-w-2xl">
+          <!-- Responsive heading -->
           <h1
-            class="text-5xl md:text-6xl font-bold text-white-900 leading-tight mb-6"
+            class="text-4xl sm:text-5xl md:text-6xl font-bold text-white-900 md:text-white leading-tight mb-6"
           >
             Creative Designer Crafting Visual Stories
           </h1>
-          <p class="text-xl md:text-2xl text-white-700 mb-10">
+
+          <!-- Responsive paragraph -->
+          <p
+            class="text-lg sm:text-xl md:text-2xl text-white-800 md:text-gray-200 mb-10"
+          >
             Transforming ideas into compelling visual experiences that captivate
             and inspire.
           </p>
+
+          <!-- Responsive button -->
           <a
             href="#projects"
-            class="inline-flex items-center px-8 py-3 bg-gray-200 text-black font-medium rounded-button hover:bg-gray-500 transition-colors shadow-md whitespace-nowrap"
+            class="inline-flex items-center px-6 sm:px-8 py-3 bg-gray-200 text-black font-medium rounded-button hover:bg-gray-500 transition-colors shadow-md whitespace-nowrap"
           >
             View My Work
             <i class="ri-arrow-right-line ml-2"></i>
           </a>
         </div>
       </div>
+
+      <!-- Optional dark overlay for better text visibility -->
+      <div class="absolute inset-0 bg-black/30 md:bg-transparent"></div>
     </section>
+
     <!-- About Section -->
     <section id="about" class="py-20 star-bg">
       <div class="container mx-auto px-6">
@@ -161,16 +174,16 @@
               <img
                 src="https://static.readdy.ai/image/3cee0f4ce3f7ecd56e56aac8116f6602/39bb60eebd6a41e4e51ad9d60d702055.jfif"
                 alt="Zeel Devani"
-                class=" w-full object-cover"
+                class="w-full object-cover"
               />
             </div>
           </div>
           <div class="md:w-3/4">
             <p class="text-lg text-white-700 mb-8">
-              Hello! I'm Zeel Devani, a passionate graphic designer with over creating meaningful visual solutions. Based in
-              Mumbai, I specialize in branding, UI/UX design, and illustration,
-              helping businesses communicate their vision through compelling
-              visuals.
+              Hello! I'm Zeel Devani, a passionate graphic designer with over
+              creating meaningful visual solutions. Based in Mumbai, I
+              specialize in branding, UI/UX design, and illustration, helping
+              businesses communicate their vision through compelling visuals.
             </p>
             <p class="text-lg text-white-700 mb-8">
               My design philosophy centers on the perfect balance between
@@ -179,9 +192,7 @@
               project I undertake is approached with meticulous attention to
               detail and a commitment to exceeding client expectations.
             </p>
-            <h3 class="text-2xl font-semibold text-white-900 mb-6">
-              Skills
-            </h3>
+            <h3 class="text-2xl font-semibold text-white-900 mb-6">Skills</h3>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
               <div class="bg-white p-4 rounded shadow-sm">
                 <div
@@ -313,7 +324,10 @@
                 Spotify User Interface
               </h3>
               <p class="text-gray-600">
-                Designed a sleek, modern music streaming interface, including home, search, and player screens, focused on intuitive navigation, vibrant category cards, and an immersive listening experience.
+                Designed a sleek, modern music streaming interface, including
+                home, search, and player screens, focused on intuitive
+                navigation, vibrant category cards, and an immersive listening
+                experience.
               </p>
             </div>
           </div>
@@ -348,7 +362,9 @@
                 Restaurant Menu
               </h3>
               <p class="text-gray-600">
-                User interface and experience design for a food delivery app, featuring curated menus, top categories, and a seamless browsing experience.
+                User interface and experience design for a food delivery app,
+                featuring curated menus, top categories, and a seamless browsing
+                experience.
               </p>
             </div>
           </div>
@@ -383,7 +399,9 @@
                 Tulsi-skincare-Branding
               </h3>
               <p class="text-gray-600">
-                Complete brand identity design for an organic skincare line, including logo, packaging, and natural-themed visuals to highlight purity and radiance.
+                Complete brand identity design for an organic skincare line,
+                including logo, packaging, and natural-themed visuals to
+                highlight purity and radiance.
               </p>
             </div>
           </div>
@@ -413,11 +431,11 @@
                 class="inline-block px-3 py-1 bg-indigo-100 text-primary text-xs font-medium rounded-full mb-3"
                 >Branding</span
               >
-              <h3 class="text-xl font-bold text-gray-900 mb-2">
-                PETAL-SMOKE
-              </h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">PETAL-SMOKE</h3>
               <p class="text-gray-600">
-                Elegant brand identity and packaging design for a luxurious perfume line, blending floral motifs with refined visual aesthetics.
+                Elegant brand identity and packaging design for a luxurious
+                perfume line, blending floral motifs with refined visual
+                aesthetics.
               </p>
             </div>
           </div>
@@ -452,7 +470,9 @@
                 Sonix Headphones E-Commerce
               </h3>
               <p class="text-gray-600">
-                Comprehensive website design for an innovative audio brand, showcasing premium headphones and immersive sound experiences through sleek visuals and engaging user flows.
+                Comprehensive website design for an innovative audio brand,
+                showcasing premium headphones and immersive sound experiences
+                through sleek visuals and engaging user flows.
               </p>
             </div>
           </div>
@@ -483,11 +503,11 @@
                 class="inline-block px-3 py-1 bg-indigo-100 text-primary text-xs font-medium rounded-full mb-3"
                 >Illustrator</span
               >
-              <h3 class="text-xl font-bold text-gray-900 mb-2">
-                Moodboard
-              </h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Moodboard</h3>
               <p class="text-gray-600">
-                Branding concept that defines a vibrant, culturally inspired lifestyle brand, fusing the warm heritage of a classic Indian setting with minimal, modern product packaging.
+                Branding concept that defines a vibrant, culturally inspired
+                lifestyle brand, fusing the warm heritage of a classic Indian
+                setting with minimal, modern product packaging.
               </p>
             </div>
           </div>
@@ -518,11 +538,11 @@
                 class="inline-block px-3 py-1 bg-indigo-100 text-primary text-xs font-medium rounded-full mb-3"
                 >Illustrator</span
               >
-              <h3 class="text-xl font-bold text-gray-900 mb-2">
-                Moodboard
-              </h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Moodboard</h3>
               <p class="text-gray-600">
-                Luxury Brand Identity fusing the sophistication of high-end jewelry and skincare with a dark, moody aesthetic and a rich, deep green and gold palette anchored by bespoke typography.
+                Luxury Brand Identity fusing the sophistication of high-end
+                jewelry and skincare with a dark, moody aesthetic and a rich,
+                deep green and gold palette anchored by bespoke typography.
               </p>
             </div>
           </div>
@@ -553,11 +573,11 @@
                 class="inline-block px-3 py-1 bg-indigo-100 text-primary text-xs font-medium rounded-full mb-3"
                 >Illustrator</span
               >
-              <h3 class="text-xl font-bold text-gray-900 mb-2">
-                Standee
-              </h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Standee</h3>
               <p class="text-gray-600">
-                Retail Standee Design for PUROHERITAGE.COM promoting a Fashion Sale with "Up To 50% Off", utilizing a minimalist aesthetic to highlight the product and key discount offer.
+                Retail Standee Design for PUROHERITAGE.COM promoting a Fashion
+                Sale with "Up To 50% Off", utilizing a minimalist aesthetic to
+                highlight the product and key discount offer.
               </p>
             </div>
           </div>
@@ -588,11 +608,11 @@
                 class="inline-block px-3 py-1 bg-indigo-100 text-primary text-xs font-medium rounded-full mb-3"
                 >Illustrator</span
               >
-              <h3 class="text-xl font-bold text-gray-900 mb-2">
-                Billboard
-              </h3>
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Billboard</h3>
               <p class="text-gray-600">
-                Luxury Fashion Billboard Design for PURO HERITAGE promoting a Limited Time Sale by leveraging aspirational lifestyle photography, a clean layout, and a soft, modern color palette.
+                Luxury Fashion Billboard Design for PURO HERITAGE promoting a
+                Limited Time Sale by leveraging aspirational lifestyle
+                photography, a clean layout, and a soft, modern color palette.
               </p>
             </div>
           </div>
@@ -761,7 +781,9 @@
                     >
                       <i class="ri-mail-line"></i>
                     </div>
-                    <span class="ml-3 text-white-700" id="email-contact">zeeldevani03@gmail.com</span>
+                    <span class="ml-3 text-white-700" id="email-contact"
+                      >zeeldevani03@gmail.com</span
+                    >
                   </li>
                   <li class="flex items-start">
                     <div
@@ -769,7 +791,9 @@
                     >
                       <i class="ri-phone-line"></i>
                     </div>
-                    <span class="ml-3 text-white-700" id="phone-contact">+91 72840 86106</span>
+                    <span class="ml-3 text-white-700" id="phone-contact"
+                      >+91 72840 86106</span
+                    >
                   </li>
                   <li class="flex items-start">
                     <div
@@ -919,6 +943,4 @@
     <!-- Scripts -->
     <script src="script.js"></script>
   </body>
-
-</html> 
-
+</html>
