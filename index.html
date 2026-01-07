@@ -40,7 +40,18 @@
         },
       };
     </script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: 'mbJHeSLzKx8CpVNGM',
+        });
+      })();
+    </script>
   </head>
   <body class="bg-white">
     <!-- Header -->
@@ -290,8 +301,8 @@
             class="filter-btn px-5 py-2 rounded-full border border-gray-300 text-sm font-medium transition-colors whitespace-nowrap !rounded-button"
             data-filter="Illustrator"
           >
-            Illustration
-          </button> -->
+            Illustrator
+          </button>
         </div>
         <!-- Projects Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -302,7 +313,7 @@
           >
             <div class="relative overflow-hidden h-64">
               <img
-                src="./assets/1.png"
+                src="/MindPause.png"
                 alt="UI/UX Project"
                 class="w-full h-full object-cover object-top"
               />
@@ -310,7 +321,42 @@
                 class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
               >
                 <a
-                  href="https://readdy.ai/home/a7ff011b-7542-4576-87a4-e817e6b66b57/ff925918-efec-4ac7-9aad-100e3033ab00"
+                  href="https://github.com/ZeellDevani/UI-UX/blob/main/MindPause.png"
+                  data-readdy="true"
+                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap project-view-btn"
+                  >View Project</a
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block px-3 py-1 bg-indigo-100 text-primary text-xs font-medium rounded-full mb-3"
+                >UI/UX</span
+              >
+              <h3 class="text-xl font-bold text-gray-900 mb-2">MindPause</h3>
+              <p class="text-gray-600">
+                MindPause is a calm, non-judgmental emotional check-in mobile
+                application designed to help users pause, understand their
+                emotions, and receive gentle support in a short time.
+              </p>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div
+            class="project-card hover-card bg-white rounded-lg overflow-hidden shadow-md"
+            data-category="ui-ux"
+          >
+            <div class="relative overflow-hidden h-64">
+              <img
+                src="/1.png"
+                alt="UI/UX Project"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
+              >
+                <a
+                  href="https://github.com/ZeellDevani/UI-UX/blob/main/Spotify%2002.jpg"
                   data-readdy="true"
                   class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap project-view-btn"
                   >View Project</a
@@ -323,10 +369,13 @@
                 >UI/UX</span
               >
               <h3 class="text-xl font-bold text-gray-900 mb-2">
-                Aromatic Brew Café
+                Spotify User Interface
               </h3>
               <p class="text-gray-600">
-                Designed a sleek, modern music streaming interface, including home, search, and player screens, focused on intuitive navigation, vibrant category cards, and an immersive listening experience.
+                Designed a sleek, modern music streaming interface, including
+                home, search, and player screens, focused on intuitive
+                navigation, vibrant category cards, and an immersive listening
+                experience.
               </p>
             </div>
           </div>
@@ -337,7 +386,7 @@
           >
             <div class="relative overflow-hidden h-64">
               <img
-                src="./assets/Restaurant_Menu.jpg"
+                src="/Restaurant_Menu.jpg"
                 alt="UI/UX Project"
                 class="w-full h-full object-cover object-top"
               />
@@ -345,7 +394,7 @@
                 class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
               >
                 <a
-                  href="https://readdy.ai/home/a7ff011b-7542-4576-87a4-e817e6b66b57/ff925918-efec-4ac7-9aad-100e3033ab00"
+                  href="https://github.com/ZeellDevani/CODSOFT/blob/main/Restaurant_Menu.jpg"
                   data-readdy="true"
                   class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap project-view-btn"
                   >View Project</a
@@ -358,21 +407,23 @@
                 >UI/UX</span
               >
               <h3 class="text-xl font-bold text-gray-900 mb-2">
-                FitTrack Mobile App
+                Restaurant Menu
               </h3>
               <p class="text-gray-600">
-                User interface and experience design for a food delivery app, featuring curated menus, top categories, and a seamless browsing experience.
+                User interface and experience design for a food delivery app,
+                featuring curated menus, top categories, and a seamless browsing
+                experience.
               </p>
             </div>
           </div>
           <!-- Project 4 -->
           <div
             class="project-card hover-card bg-white rounded-lg overflow-hidden shadow-md"
-            data-category="illustration"
+            data-category="branding"
           >
             <div class="relative overflow-hidden h-64">
               <img
-                src="./assets/tulsi skin care.png"
+                src="/tulsi skin care.png"
                 alt="Illustrator Project"
                 class="w-full h-full object-cover object-top"
               />
@@ -380,42 +431,7 @@
                 class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
               >
                 <a
-                  href="https://readdy.ai/home/a7ff011b-7542-4576-87a4-e817e6b66b57/ff925918-efec-4ac7-9aad-100e3033ab00"
-                  data-readdy="true"
-                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap project-view-btn"
-                  >View Project</a
-                >
-              </div>
-            </div>
-            <div class="p-6">
-              <span
-                class="inline-block px-3 py-1 bg-indigo-100 text-primary text-xs font-medium rounded-full mb-3"
-                >Illustration</span
-              >
-              <h3 class="text-xl font-bold text-gray-900 mb-2">
-                Dreamland Stories
-              </h3>
-              <p class="text-gray-600">
-                Complete brand identity design for an organic skincare line, including logo, packaging, and natural-themed visuals to highlight purity and radiance.
-              </p>
-            </div>
-          </div>
-          <!-- Project 5 -->
-          <div
-            class="project-card hover-card bg-white rounded-lg overflow-hidden shadow-md"
-            data-category="branding"
-          >
-            <div class="relative overflow-hidden h-64">
-              <img
-                src="https://readdy.ai/api/search-image?query=Elegant%20branding%20project%20for%20a%20luxury%20skincare%20line%2C%20featuring%20packaging%20design%2C%20logo%2C%20typography%2C%20and%20brand%20identity%20elements%20on%20a%20clean%20background%20with%20soft%20lighting%2C%20professional%20quality%20graphic%20design%20work&width=600&height=400&seq=6&orientation=landscape"
-                alt="Branding Project"
-                class="w-full h-full object-cover object-top"
-              />
-              <div
-                class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
-              >
-                <a
-                  href="https://readdy.ai/home/a7ff011b-7542-4576-87a4-e817e6b66b57/ff925918-efec-4ac7-9aad-100e3033ab00"
+                  href="https://www.behance.net/gallery/214733357/Tulsi-skincare-Branding"
                   data-readdy="true"
                   class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap project-view-btn"
                   >View Project</a
@@ -428,22 +444,57 @@
                 >Branding</span
               >
               <h3 class="text-xl font-bold text-gray-900 mb-2">
-                Lumina Skincare
+                Tulsi-skincare-Branding
               </h3>
               <p class="text-gray-600">
-                Sophisticated brand identity and packaging design for a premium
-                organic skincare collection.
+                Complete brand identity design for an organic skincare line,
+                including logo, packaging, and natural-themed visuals to
+                highlight purity and radiance.
               </p>
             </div>
-          </div> -->
+          </div>
           <!-- Project 5 -->
+          <div
+            class="project-card hover-card bg-white rounded-lg overflow-hidden shadow-md"
+            data-category="branding"
+          >
+            <div class="relative overflow-hidden h-64">
+              <img
+                src="perfume.jpg"
+                class="w-full h-full object-cover object-top"
+              />
+              <div
+                class="absolute inset-0 bg-primary bg-opacity-80 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
+              >
+                <a
+                  href="https://www.behance.net/gallery/231690991/PETAL-SMOKE"
+                  data-readdy="true"
+                  class="px-6 py-3 bg-white text-primary font-medium rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap project-view-btn"
+                  >View Project</a
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <span
+                class="inline-block px-3 py-1 bg-indigo-100 text-primary text-xs font-medium rounded-full mb-3"
+                >Branding</span
+              >
+              <h3 class="text-xl font-bold text-gray-900 mb-2">PETAL-SMOKE</h3>
+              <p class="text-gray-600">
+                Elegant brand identity and packaging design for a luxurious
+                perfume line, blending floral motifs with refined visual
+                aesthetics.
+              </p>
+            </div>
+          </div>
+          <!-- Project 6 -->
           <div
             class="project-card hover-card bg-white rounded-lg overflow-hidden shadow-md"
             data-category="ui-ux"
           >
             <div class="relative overflow-hidden h-64">
               <img
-                src="./assets/Desktop - 1.jpg"
+                src="/Desktop - 1.jpg"
                 alt="UI/UX Project"
                 class="w-full h-full object-cover object-top"
               />
@@ -467,12 +518,14 @@
                 Sonix Headphones E-Commerce
               </h3>
               <p class="text-gray-600">
-                Comprehensive website design for an innovative audio brand, showcasing premium headphones and immersive sound experiences through sleek visuals and engaging user flows.
+                Comprehensive website design for an innovative audio brand,
+                showcasing premium headphones and immersive sound experiences
+                through sleek visuals and engaging user flows.
               </p>
             </div>
           </div>
-          <!-- Project 6 -->
-          <!-- <div
+          <!-- Project 7 -->
+          <div
             class="project-card hover-card bg-white rounded-lg overflow-hidden shadow-md"
             data-category="Illustrator"
           >
@@ -500,8 +553,9 @@
               >
               <h3 class="text-xl font-bold text-gray-900 mb-2">Moodboard</h3>
               <p class="text-gray-600">
-                Series of abstract digital artworks exploring the relationship
-                between color, shape, and emotion.
+                Branding concept that defines a vibrant, culturally inspired
+                lifestyle brand, fusing the warm heritage of a classic Indian
+                setting with minimal, modern product packaging.
               </p>
             </div>
           </div>
@@ -775,7 +829,9 @@
                     >
                       <i class="ri-mail-line"></i>
                     </div>
-                    <span class="ml-3 text-white-700" id="email-contact">zeeldevani03@gmail.com</span>
+                    <span class="ml-3 text-white-700" id="email-contact"
+                      >zeeldevani03@gmail.com</span
+                    >
                   </li>
                   <li class="flex items-start">
                     <div
@@ -783,7 +839,9 @@
                     >
                       <i class="ri-phone-line"></i>
                     </div>
-                    <span class="ml-3 text-white-700" id="phone-contact">+91 72840 86106</span>
+                    <span class="ml-3 text-white-700" id="phone-contact"
+                      >+91 72840 86106</span
+                    >
                   </li>
                   <li class="flex items-start">
                     <div
