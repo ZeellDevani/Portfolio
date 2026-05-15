@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -23,18 +23,18 @@
       tailwind.config = {
         theme: {
           extend: {
-            colors: { primary: '#7B68EE', secondary: '#9370DB' },
+            colors: { primary: "#7B68EE", secondary: "#9370DB" },
             borderRadius: {
-              none: '0px',
-              sm: '4px',
-              DEFAULT: '8px',
-              md: '12px',
-              lg: '16px',
-              xl: '20px',
-              '2xl': '24px',
-              '3xl': '32px',
-              full: '9999px',
-              button: '8px',
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
             },
           },
         },
@@ -48,7 +48,7 @@
     <script type="text/javascript">
       (function () {
         emailjs.init({
-          publicKey: 'mbJHeSLzKx8CpVNGM',
+          publicKey: "mbJHeSLzKx8CpVNGM",
         });
       })();
     </script>
@@ -80,6 +80,16 @@
             href="#projects"
             class="nav-link text-gray-800 hover:text-primary transition-colors"
             >Projects</a
+          >
+          <a
+            href="#experience"
+            class="nav-link text-gray-800 hover:text-primary transition-colors"
+            >Experience</a
+          >
+          <a
+            href="#certifications"
+            class="nav-link text-gray-800 hover:text-primary transition-colors"
+            >Certifications</a
           >
           <a
             href="#contact"
@@ -117,6 +127,16 @@
             >Projects</a
           >
           <a
+            href="#experience"
+            class="text-gray-800 hover:text-primary py-2 transition-colors"
+            >Experience</a
+          >
+          <a
+            href="#certifications"
+            class="text-gray-800 hover:text-primary py-2 transition-colors"
+            >Certifications</a
+          >
+          <a
             href="#contact"
             class="text-gray-800 hover:text-primary py-2 transition-colors"
             >Contact</a
@@ -137,7 +157,7 @@
     <section
       id="home"
       class="w-full min-h-screen pt-24 relative overflow-hidden star-bg bg-center bg-no-repeat bg-cover"
-      style="background-image: url('bg2.jpg')"
+      style="background-image: url(&quot;bg2.jpg&quot;)"
     >
       <div
         class="container mx-auto px-6 py-20 relative z-10 flex flex-col justify-center h-full"
@@ -667,6 +687,104 @@
         </div>
       </div>
     </section>
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 star-bg">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center text-white-900 mb-4">
+          Experience
+        </h2>
+        <p class="text-lg text-center text-white-600 mb-12">
+          My professional journey so far
+        </p>
+        <div class="max-w-3xl mx-auto space-y-8">
+          <!-- Experience Item 1 - Replace with your actual experience -->
+          <div class="bg-white rounded-lg shadow-md p-6 flex gap-4">
+            <div
+              class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full bg-indigo-100 text-primary"
+            >
+              <i class="ri-briefcase-line ri-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold text-gray-900">
+                Graphic Design Intern
+              </h3>
+              <p class="text-primary font-medium">Cocoma Digital</p>
+              <p class="text-sm text-gray-500 mb-2">Jan 2026 – Present</p>
+              <p class="text-gray-600">
+                Brief description of your role and what you worked on during
+                this internship.
+              </p>
+            </div>
+          </div>
+
+          <!-- Add more experience items by copying the block above -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-20 star-bg">
+      <div class="container mx-auto px-6">
+        <h2 class="text-4xl font-bold text-center text-white-900 mb-4">
+          Certifications
+        </h2>
+        <p class="text-lg text-center text-white-600 mb-12">
+          Click on any certificate to view it
+        </p>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto"
+        >
+          <!-- Certificate 1 - Replace href with your certificate image/PDF link -->
+          <a
+            href="https://drive.google.com/file/d/1i0PWAkj8gZdb6qkjlZVrtLXqrSYebYNg/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-white rounded-lg shadow-md p-6 flex items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+          >
+            <div
+              class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full bg-indigo-100 text-primary group-hover:bg-primary group-hover:text-white transition-colors"
+            >
+              <i class="ri-award-line ri-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-gray-900 font-semibold">
+                Advanced Program in Digital Media Creation
+              </h3>
+              <p class="text-sm text-gray-500">MAAC</p>
+              <p class="text-xs text-primary mt-1 flex items-center gap-1">
+                <i class="ri-external-link-line"></i> View Certificate
+              </p>
+            </div>
+          </a>
+
+          <!-- Certificate 2 -->
+          <a
+            href="https://drive.google.com/file/d/1owSjmZK_kjp4PN_e71COVbcMIzMp6Qzi/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="bg-white rounded-lg shadow-md p-6 flex items-center gap-4 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+          >
+            <div
+              class="w-12 h-12 flex-shrink-0 flex items-center justify-center rounded-full bg-indigo-100 text-primary group-hover:bg-primary group-hover:text-white transition-colors"
+            >
+              <i class="ri-award-line ri-xl"></i>
+            </div>
+            <div>
+              <h3 class="text-gray-900 font-semibold">
+                Create High-Fidelity Designs and Prototypes in Figma
+              </h3>
+              <p class="text-sm text-gray-500">Coursera (Google)</p>
+              <p class="text-xs text-primary mt-1 flex items-center gap-1">
+                <i class="ri-external-link-line"></i> View Certificate
+              </p>
+            </div>
+          </a>
+
+          <!-- Add more certificates by copying the block above -->
+        </div>
+      </div>
+    </section>
+
     <!-- Contact Section -->
     <section id="contact" class="py-20 star-bg">
       <div class="container mx-auto px-6">
@@ -927,6 +1045,16 @@
               href="#projects"
               class="text-gray-400 hover:text-white transition-colors"
               >Projects</a
+            >
+            <a
+              href="#experience"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Experience</a
+            >
+            <a
+              href="#certifications"
+              class="text-gray-400 hover:text-white transition-colors"
+              >Certifications</a
             >
             <a
               href="#contact"
